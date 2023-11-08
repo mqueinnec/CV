@@ -1,0 +1,81 @@
+---
+name: Martin
+surname: Queinnec
+position: "Remote Sensing Specialist | PhD"
+address: "Vancouver, British Columbia, Canada"
+phone: 778-513-0319
+email: "martinqueinnec@gmail.com"
+linkedin: "martin-queinnec"
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141
+output: 
+  vitae::awesomecv:
+    page_total: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+
+source(file = here::here("data", "data.R"))
+```
+
+```{r about_me, child = here::here("childs/about_me.Rmd")}
+```
+
+# Education
+
+```{r Education, results = "asis"}
+education %>%
+  detailed_entries(
+    with = Degree,
+    what = Institution,
+    why = Detail,
+    when = Year,
+    where = Where, .protect = F
+  )
+```
+
+# Experience
+
+```{r Experience, results = "asis"}
+experience %>%
+  detailed_entries(
+    with = Position,
+    what = Institution,
+    why = Details,
+    when = Year,
+    where = Where, .protect = F
+  )
+```
+
+# Skills
+
+```{=tex}
+\begin{cvskills}
+  \cvskill
+    {Data Science}
+    {R (including spatial data processing); Lidar processing (LAStools, lidR); QGIS/ArcGIS Pro}
+
+  \cvskill
+    {Writing and Communication}
+    {Peer-reviewed publications; Public speaker (instructor and conferences)}
+    
+  \cvskill
+    {Languages}
+    {English (Professional working proficiency); French (Native); Spanish (Intermediate)}
+\end{cvskills}
+```
+# Awards
+
+```{r AWARDS}
+awards %>%
+  detailed_entries(
+    with = area,
+    what = detail,
+    why = accomplishment,
+    when = year,
+    where = where
+  )
+```

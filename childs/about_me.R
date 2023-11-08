@@ -1,0 +1,3 @@
+about_me <- "Remote sensing specialist and environmental engineer passionate about translating remote sensing & geospatial data into impactful and actionable insights. Strong experience with LiDAR and multispectral imagery data manipulation and their integration into predictive models."
+
+a_propos <- "Spécialiste en télédétection et ingénieur en environnement intéressé par l'application de la télédétection et l’analyse de données géospatiales pour la modélisation de l’environnement et à la production de données permettant de répondre à des problématiques concrètes liées à nos territoires. Solide expérience dans la manipulation de données LiDAR et d'imagerie multispectrale, ainsi que leur intégration dans des modèles prédictifs."

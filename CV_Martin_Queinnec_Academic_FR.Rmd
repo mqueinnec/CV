@@ -1,0 +1,120 @@
+---
+name: Martin
+surname: Queinnec
+position: "Spécialiste en télédétection | PhD"
+address: "Lausanne à partir de Janvier 2024"
+email: "martinqueinnec@gmail.com"
+linkedin: "martin-queinnec"
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    page_total: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+
+source(file = here::here("data", "data_fr.R"))
+```
+
+```{r, include = FALSE}
+source(here::here("childs/about_me.R"))
+```
+
+---
+aboutme: "`r a_propos`"
+---
+# Formation
+
+```{r Education, results = "asis"}
+education_fr %>%
+  detailed_entries(
+    with = Degree,
+    what = Institution,
+    why = Detail,
+    when = Year,
+    where = Where, .protect = F
+  )
+```
+
+# Expériences professionnelles
+
+```{r Experience, results = "asis"}
+experience_fr %>%
+  detailed_entries(
+    with = Position,
+    what = Institution,
+    why = Details,
+    when = Year,
+    where = Where, .protect = F
+  )
+```
+
+# Compétences
+
+\begin{cvskills}
+  \cvskill
+    {Analyse de données géographiques}
+    {R; Analyse de données LiDAR (lidR, LAStools); Logiciels SIG (QGIS, ArcGIS Pro); Python}
+
+  \cvskill
+    {Communation écrite et orale}
+    {Publications dans des revues scientifiques; Enseignement; Conférences scientifiques}
+    
+  \cvskill
+    {Langues}
+    {Anglais (Courant, C2) ; Espagnol (Intermédiaire, B1)}
+\end{cvskills}
+
+\
+\
+\
+\
+
+# Prix et distinctions
+
+```{r AWARDS}
+awards_fr %>%
+  detailed_entries(
+    with = area,
+    what = detail,
+    why = accomplishment,
+    when = year,
+    where = where
+  )
+```
+
+# Publications scientifiques
+
+```{r publications}
+
+# under_review <- bibliography_entries("data/review_publications.bib") %>%
+#   mutate(issued = "Under Review")
+
+bib <- bibliography_entries("data/publications.bib") %>%
+  arrange(desc(issued)) %>%
+  mutate(issued = lubridate::as_date(issued), 
+         issued = as.character(lubridate::year(issued)))
+
+# bib_all <- dplyr::bind_rows(under_review, bib)
+
+# bib$`container-title` <- stringr::str_to_sentence(bib$`container-title`, locale = "en")
+
+bib
+``` 
+
+# Conférences et colloques
+
+```{r, Conference, results='asis'}
+conferences_fr %>%
+  detailed_entries(
+    with = name,
+    what = desc,
+    when = when,
+    where = where
+  )
+```
+
+
