@@ -2,21 +2,21 @@ education <- tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Detail,
   "PhD in Remote Sensing applied to Forestry", 
   "January 2019 - December 2022", 
-  "University of British Columbia", 
+  "University of British Columbia, Faculty of Forestry", 
   "Vancouver, Canada",
-  "Enhancing the characterization of forest structure and resources for forest inventory and monitoring\nusing airborne and spaceborne single photon lidar",
+  c("Integrated Remote Sensing Studio, supervised by Nicholas Coops", 
+    "PhD Thesis: \\emph{Enhancing the characterization of forest structure and resources for forest inventory and monitoring using airborne and spaceborne single photon lidar}"),
   "MSc in Environmental Sciences and Engineering", 
   "September 2015 - July 2017", 
   "Ecole Polytechnique Federale de Lausanne", 
   "Lausanne, Switzerland", 
-  "Master thesis: Influence of mountain shading on the
-spatial interpolation of direct shortwave radiation for
-snowmelt modeling",
+  c("Specialization in Water Resources Management \\& Environmental Monitoring",
+  "Master thesis: \\emph{Influence of mountain shading on the spatial interpolation of direct shortwave radiation for snowmelt modeling}"),
   "BSc in Environmental Sciences and Engineering", 
   "September 2012 - July 2015", 
   "Ecole Polytechnique Federale de Lausanne", 
   "Lausanne, Switzerland", 
-  NA
+  character()
 )
 
 experience <- tribble(
@@ -30,7 +30,7 @@ experience <- tribble(
        "Advising on remote sensing data products"),
   "Teaching Assistant", 
   "January 2019 - May 2022", 
-  "Faculty of Forest Resources Management (UBC)", 
+  "University of British Columbia, Faculty of Forestry", 
   "Vancouver, Canada", 
   "Developing course content (lectures and assignments) and guiding students to learn about remote sensing concepts and develop research proposals
   \\begin{itemize}
@@ -41,7 +41,7 @@ experience <- tribble(
     \\end{itemize}",
   "Co-instructor", 
   "September 2021 - December 2021", 
-  "Faculty of Forest Resources Management (UBC)", 
+  "University of British Columbia, Faculty of Forestry", 
   "Vancouver, Canada",
   "Responsible for teaching spatial data processing with R to students in the Master of Geomatics for Environmental Management program
   \\begin{itemize}

@@ -60,11 +60,11 @@ experience %>%
 \begin{cvskills}
   \cvskill
     {Data Science}
-    {R (including spatial data processing); QGIS/ArcGIS Pro; Lidar processing (LAStools, lidR); R Shiny Apps; Python}
+    {R (including spatial data processing); QGIS/ArcGIS Pro; Lidar processing (LAStools, lidR);\newline R Shiny Apps; Python; Google Earth Engine}
 
   \cvskill
     {Writing and Communication}
-    {Peer-reviewed publications; Teaching; Conferences}
+    {Microsoft Office Suite; Adobe Illustrator; Peer-reviewed publications; Teaching; Conferences}
     
   \cvskill
     {Languages}
